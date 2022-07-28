@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>New video today?</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+    <div class="page-content">
+      <h1>Did {{ channel }} upload today?</h1> 
+      <h2>{{ today }} </h2>
+      <h3>Last upload was <span class="upload-days">{{ days }} days</span> ago</h3>
+      <p><span class="video-title">{{ title }}</span> uploaded on {{ date }}</p>
+      <div class="page-video">
+        <iframe src="https://www.youtube.com/embed/{{ id }}" width="852" height="480" allowfullscreen>
+      </iframe>
+    </div>
+    </div>
+  </body>
+</html>
